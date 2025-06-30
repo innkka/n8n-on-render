@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: n8n-job-bot
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        value: inna_pm
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: YourSecurePassword123!
+      - key: WEBHOOK_URL
+        value: https://n8n-job-bot.onrender.com/
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-job-bot.onrender.com/
+      - key: TZ
+        value: Europe/Jerusalem
+      - key: GENERIC_TIMEZONE
+        value: Europe/Jerusalem
