@@ -2,6 +2,7 @@ FROM n8nio/n8n
 
 ENV N8N_PORT=10000
 ENV N8N_REDIS_ENABLED=false
+
 EXPOSE 10000
 
-CMD ["/bin/sh", "-c", "n8n"]
+CMD ["n8n"]
