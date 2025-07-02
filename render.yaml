@@ -1,19 +1,24 @@
 services:
   - type: web
     name: n8n-job-bot
-    env: docker
+    env: node
     plan: free
-    dockerfilePath: Dockerfile
+    buildCommand: npm install -g n8n
+    startCommand: n8n
     envVars:
-      - key: N8N_BASIC_AUTH_USER
-        value: inna_pm
-      - key: N8N_BASIC_AUTH_PASSWORD
-        value: YourSecurePassword123!
+      - key: N8N_PORT
+        value: 10000
+      - key: PORT
+        value: 10000
+      - key: N8N_HOST
+        value: n8n-job-bot-3911.onrender.com
       - key: WEBHOOK_URL
-        value: https://n8n-job-bot.onrender.com/
+        value: https://n8n-job-bot-3911.onrender.com/
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: yourStrongPassword
       - key: N8N_EDITOR_BASE_URL
-        value: https://n8n-job-bot.onrender.com/
-      - key: TZ
-        value: Europe/Jerusalem
-      - key: GENERIC_TIMEZONE
-        value: Europe/Jerusalem
+        value: https://n8n-job-bot-3911.onrender.com/
+      - key: N8N_ENCRYPTION_KEY
+        value: your-very-long-encryption-key
