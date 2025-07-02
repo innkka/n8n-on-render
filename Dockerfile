@@ -4,4 +4,4 @@ ENV N8N_PORT=10000
 ENV N8N_REDIS_ENABLED=false
 EXPOSE 10000
 
-CMD ["n8n"]
+CMD ["/bin/sh", "-c", "n8n"]
