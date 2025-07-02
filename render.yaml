@@ -15,10 +15,10 @@ services:
       - key: WEBHOOK_URL
         value: https://n8n-job-bot-3911.onrender.com/
       - key: N8N_BASIC_AUTH_USER
-        value: admin
+        fromDatabase: true
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: yourStrongPassword
+        fromDatabase: true
       - key: N8N_EDITOR_BASE_URL
         value: https://n8n-job-bot-3911.onrender.com/
       - key: N8N_ENCRYPTION_KEY
-        value: your-very-long-encryption-key
+        fromDatabase: true
