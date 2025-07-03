@@ -11,14 +11,14 @@ services:
       - key: PORT
         value: 10000
       - key: N8N_HOST
-        value: n8n-job-bot-3911.onrender.com
+        value: <myapp.inrender.com>
       - key: WEBHOOK_URL
-        value: https://n8n-job-bot-3911.onrender.com/
+        value: https://<myapp.inrender.com>/
       - key: N8N_BASIC_AUTH_USER
         fromDatabase: true
       - key: N8N_BASIC_AUTH_PASSWORD
         fromDatabase: true
       - key: N8N_EDITOR_BASE_URL
-        value: https://n8n-job-bot-3911.onrender.com/
+        value: https://<myapp.inrender.com>/
       - key: N8N_ENCRYPTION_KEY
         fromDatabase: true
